@@ -1,0 +1,18 @@
+object frmClientEdit: TfrmClientEdit
+  object ToolBar1: TToolBar
+  end
+  object lblEditClient: TLabel
+  end
+  object edtName: TEdit
+  end
+  object edtCPF: TEdit
+  end
+  object edtAddress: TEdit
+  end
+  object edtPhone: TEdit
+  end
+  object edtEmail: TEdit
+  end
+  object btnSave: TButton
+  end
+end

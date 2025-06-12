@@ -1,0 +1,12 @@
+object frmMain: TfrmMain
+  object ToolBar1: TToolBar
+  end
+  object lblTitle: TLabel
+  end
+  object btnProducts: TButton
+  end
+  object btnClients: TButton
+  end
+  object btnSync: TButton
+  end
+end
