@@ -28,15 +28,23 @@ implementation
 
 {$R *.fmx}
 
+uses MainForm;
+
 procedure TfrmLogin.FormCreate(Sender: TObject);
 begin
   ApplyTheme(Self);
   lblTitle.Text := 'Login';
+  edtUser.TextPrompt := 'Nome';
+  edtPassword.TextPrompt := 'Senha';
+  edtPassword.Password := True;
+  lblForgot.Text := 'Forgot Password?';
+  lblForgot.TextSettings.FontColor := COLOR_BLUE_DARK;
 end;
 
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
 begin
-  // TODO: validate login
+  // Ação simples de login - abre o menu principal
+  frmMain.Show;
 end;
 
 end.

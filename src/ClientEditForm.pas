@@ -5,12 +5,11 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, FMX.Edit,
-  FMX.Controls.Presentation, FMX.ListBox, Theme;
+  FMX.Controls.Presentation, FMX.ListBox, FMX.ScrollBox, Theme;
 
 type
   TfrmClientEdit = class(TForm)
-    ToolBar1: TToolBar;
-    lblEditClient: TLabel;
+    ScrollBox1: TScrollBox;
     edtNome: TEdit;
     edtDocumento: TEdit;
     edtEndereco: TEdit;
@@ -37,7 +36,6 @@ implementation
 procedure TfrmClientEdit.FormCreate(Sender: TObject);
 begin
   ApplyTheme(Self);
-  lblEditClient.Text := 'Cliente';
 end;
 
 procedure TfrmClientEdit.btnSaveClick(Sender: TObject);

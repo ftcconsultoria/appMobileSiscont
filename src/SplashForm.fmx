@@ -1,10 +1,21 @@
 object frmSplash: TfrmSplash
+  Caption = 'Splash'
   object Layout1: TLayout
-  end
-  object Image1: TImage
-  end
-  object lblTitle: TLabel
-  end
-  object btnEnter: TButton
+    Align = Contents
+    object Image1: TImage
+      Align = Center
+      Width = 200
+      Height = 200
+    end
+    object lblTitle: TLabel
+      Align = Top
+      Text = 'SISCONT'
+      TextSettings.Font.Size = 24
+      TextSettings.FontColor = claWhite
+    end
+    object btnEnter: TButton
+      Align = Bottom
+      Text = 'Continuar'
+    end
   end
 end

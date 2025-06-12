@@ -10,6 +10,8 @@ uses
   ProductsForm in 'src\ProductsForm.pas' {frmProducts},
   LoginForm in 'src\LoginForm.pas' {frmLogin},
   SplashForm in 'src\SplashForm.pas' {frmSplash},
+  AppStyle in 'src\AppStyle.pas' {dmStyle: TDataModule},
+  BudgetForm in 'src\BudgetForm.pas' {frmBudget},
   DataModule in 'src\DataModule.pas' {dmData: TDataModule};
 
 {$R *.res}
@@ -19,10 +21,12 @@ begin
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TfrmSplash, frmSplash);
+  Application.CreateForm(TdmStyle, dmStyle);
   Application.CreateForm(TfrmProducts, frmProducts);
   Application.CreateForm(TfrmProductEdit, frmProductEdit);
   Application.CreateForm(TfrmClients, frmClients);
   Application.CreateForm(TfrmClientEdit, frmClientEdit);
+  Application.CreateForm(TfrmBudget, frmBudget);
   Application.CreateForm(TdmData, dmData);
   Application.Run;
 end.

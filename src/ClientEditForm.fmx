@@ -1,22 +1,47 @@
 object frmClientEdit: TfrmClientEdit
-  object ToolBar1: TToolBar
-  end
-  object lblEditClient: TLabel
-  end
-  object edtNome: TEdit
-  end
-  object edtDocumento: TEdit
-  end
-  object edtEndereco: TEdit
-  end
-  object edtMunicipio: TEdit
-  end
-  object cmbUF: TComboBox
-  end
-  object edtCEP: TEdit
-  end
-  object edtTelefone: TEdit
+  Caption = 'Cadastro Cliente'
+  object ScrollBox1: TScrollBox
+    Align = Client
+    Padding.Left = 16
+    Padding.Right = 16
+    object edtNome: TEdit
+      Align = Top
+      TextPrompt = 'Nome'
+    end
+    object edtDocumento: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'Documento'
+    end
+    object edtEndereco: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'Endereço'
+    end
+    object edtMunicipio: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'Município'
+    end
+    object cmbUF: TComboBox
+      Align = Top
+      Margins.Top = 10
+      Width = 100
+      Items.Strings = ('AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO')
+    end
+    object edtCEP: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'CEP'
+    end
+    object edtTelefone: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'Telefone'
+    end
   end
   object btnSave: TButton
+    Align = Bottom
+    Text = 'Salvar'
   end
 end

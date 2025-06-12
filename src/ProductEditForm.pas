@@ -5,12 +5,11 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, FMX.Edit,
-  FMX.Controls.Presentation, Theme;
+  FMX.Controls.Presentation, FMX.ScrollBox, Theme;
 
 type
   TfrmProductEdit = class(TForm)
-    ToolBar1: TToolBar;
-    lblEditProduct: TLabel;
+    ScrollBox1: TScrollBox;
     edtCodigo: TEdit;
     edtNome: TEdit;
     edtNCM: TEdit;
@@ -36,7 +35,6 @@ implementation
 procedure TfrmProductEdit.FormCreate(Sender: TObject);
 begin
   ApplyTheme(Self);
-  lblEditProduct.Text := 'Produto';
 end;
 
 procedure TfrmProductEdit.btnSaveClick(Sender: TObject);

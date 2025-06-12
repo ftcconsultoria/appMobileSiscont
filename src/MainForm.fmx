@@ -1,14 +1,35 @@
 object frmMain: TfrmMain
+  Caption = 'Menu Principal'
   object ToolBar1: TToolBar
+    Align = Top
+    object lblTitle: TLabel
+      Text = 'SISCONT'
+    end
   end
-  object lblTitle: TLabel
+  object cardBalance: TRectangle
+    Align = Top
+    Height = 120
+    Margins.Left = 16
+    Margins.Right = 16
+    YRadius = 12
+    XRadius = 12
+    object lblBalance: TLabel
+      Align = Center
+      Text = 'Saldo da Conta R$ 0,00'
+    end
+    object btnSend: TButton
+      Align = Left
+      Width = 100
+      Text = 'Enviar'
+    end
+    object btnReceive: TButton
+      Align = Right
+      Width = 100
+      Text = 'Receber'
+    end
   end
-  object btnNewProduct: TButton
-  end
-  object btnNewClient: TButton
-  end
-  object btnListProducts: TButton
-  end
-  object btnListClients: TButton
+  object ListView1: TListView
+    Align = Client
+    Margins.Top = 10
   end
 end
