@@ -1,0 +1,14 @@
+object frmLogin: TfrmLogin
+  object ToolBar1: TToolBar
+  end
+  object lblTitle: TLabel
+  end
+  object edtUser: TEdit
+  end
+  object edtPassword: TEdit
+  end
+  object btnLogin: TButton
+  end
+  object lblForgot: TLabel
+  end
+end

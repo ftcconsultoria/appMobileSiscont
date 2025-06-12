@@ -26,5 +26,11 @@
     <DCCReference Include="src\DataModule.pas">
       <Form>DataModule</Form>
     </DCCReference>
+    <DCCReference Include="src\LoginForm.pas">
+      <Form>LoginForm</Form>
+    </DCCReference>
+    <DCCReference Include="src\SplashForm.pas">
+      <Form>SplashForm</Form>
+    </DCCReference>
   </ItemGroup>
 </Project>

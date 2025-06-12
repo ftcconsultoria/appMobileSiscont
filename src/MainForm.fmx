@@ -3,10 +3,12 @@ object frmMain: TfrmMain
   end
   object lblTitle: TLabel
   end
-  object btnProducts: TButton
+  object btnNewProduct: TButton
   end
-  object btnClients: TButton
+  object btnNewClient: TButton
   end
-  object btnSync: TButton
+  object btnListProducts: TButton
+  end
+  object btnListClients: TButton
   end
 end

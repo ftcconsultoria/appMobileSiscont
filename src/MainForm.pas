@@ -10,12 +10,14 @@ type
   TfrmMain = class(TForm)
     ToolBar1: TToolBar;
     lblTitle: TLabel;
-    btnProducts: TButton;
-    btnClients: TButton;
-    btnSync: TButton;
-    procedure btnProductsClick(Sender: TObject);
-    procedure btnClientsClick(Sender: TObject);
-    procedure btnSyncClick(Sender: TObject);
+    btnNewProduct: TButton;
+    btnNewClient: TButton;
+    btnListProducts: TButton;
+    btnListClients: TButton;
+    procedure btnNewProductClick(Sender: TObject);
+    procedure btnNewClientClick(Sender: TObject);
+    procedure btnListProductsClick(Sender: TObject);
+    procedure btnListClientsClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,21 +31,26 @@ implementation
 
 {$R *.fmx}
 
-uses ProductsForm, ClientsForm;
+uses ProductsForm, ClientsForm, ProductEditForm, ClientEditForm;
 
-procedure TfrmMain.btnClientsClick(Sender: TObject);
+procedure TfrmMain.btnNewClientClick(Sender: TObject);
+begin
+  frmClientEdit.ShowModal;
+end;
+
+procedure TfrmMain.btnNewProductClick(Sender: TObject);
+begin
+  frmProductEdit.ShowModal;
+end;
+
+procedure TfrmMain.btnListClientsClick(Sender: TObject);
 begin
   frmClients.Show;
 end;
 
-procedure TfrmMain.btnProductsClick(Sender: TObject);
+procedure TfrmMain.btnListProductsClick(Sender: TObject);
 begin
   frmProducts.Show;
-end;
-
-procedure TfrmMain.btnSyncClick(Sender: TObject);
-begin
-  // TODO: call synchronization logic
 end;
 
 end.

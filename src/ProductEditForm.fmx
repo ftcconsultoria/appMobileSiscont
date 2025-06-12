@@ -3,13 +3,17 @@ object frmProductEdit: TfrmProductEdit
   end
   object lblEditProduct: TLabel
   end
-  object edtName: TEdit
+  object edtCodigo: TEdit
   end
-  object edtDescription: TEdit
+  object edtNome: TEdit
   end
-  object edtPrice: TEdit
+  object edtNCM: TEdit
   end
-  object edtStock: TEdit
+  object edtUnidade: TEdit
+  end
+  object edtValorCompra: TEdit
+  end
+  object edtValorVenda: TEdit
   end
   object btnSave: TButton
   end

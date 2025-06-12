@@ -3,6 +3,8 @@ object frmClients: TfrmClients
   end
   object lblClients: TLabel
   end
+  object SearchBox1: TSearchBox
+  end
   object ListView1: TListView
   end
   object btnAddClient: TButton
