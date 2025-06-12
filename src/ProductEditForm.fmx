@@ -1,0 +1,16 @@
+object frmProductEdit: TfrmProductEdit
+  object ToolBar1: TToolBar
+  end
+  object lblEditProduct: TLabel
+  end
+  object edtName: TEdit
+  end
+  object edtDescription: TEdit
+  end
+  object edtPrice: TEdit
+  end
+  object edtStock: TEdit
+  end
+  object btnSave: TButton
+  end
+end
