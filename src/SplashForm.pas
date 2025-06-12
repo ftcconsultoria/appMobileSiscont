@@ -26,15 +26,24 @@ implementation
 
 {$R *.fmx}
 
+uses LoginForm;
+
 procedure TfrmSplash.FormCreate(Sender: TObject);
 begin
   ApplyTheme(Self);
   lblTitle.Text := 'Bem-vindo ao SISCONT';
+  // Fundo em degradê vertical azul-claro para azul-escuro
+  Self.Fill.Kind := TBrushKind.Gradient;
+  Self.Fill.Gradient.Color := COLOR_BLUE_LIGHT;
+  Self.Fill.Gradient.Color1 := COLOR_BLUE_DARK;
+  Self.Fill.Gradient.Style := TGradientStyle.Linear;
 end;
 
 procedure TfrmSplash.btnEnterClick(Sender: TObject);
 begin
-  // TODO: open login form
+  // Abre a tela de login
+  if Assigned(frmLogin) then
+    frmLogin.Show;
 end;
 
 end.

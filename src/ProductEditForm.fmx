@@ -1,20 +1,41 @@
 object frmProductEdit: TfrmProductEdit
-  object ToolBar1: TToolBar
-  end
-  object lblEditProduct: TLabel
-  end
-  object edtCodigo: TEdit
-  end
-  object edtNome: TEdit
-  end
-  object edtNCM: TEdit
-  end
-  object edtUnidade: TEdit
-  end
-  object edtValorCompra: TEdit
-  end
-  object edtValorVenda: TEdit
+  Caption = 'Cadastro Produto'
+  object ScrollBox1: TScrollBox
+    Align = Client
+    Padding.Left = 16
+    Padding.Right = 16
+    object edtCodigo: TEdit
+      Align = Top
+      TextPrompt = 'Código'
+    end
+    object edtNome: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'Nome'
+    end
+    object edtNCM: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'NCM'
+    end
+    object edtUnidade: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'Unidade'
+    end
+    object edtValorCompra: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'Valor Compra'
+    end
+    object edtValorVenda: TEdit
+      Align = Top
+      Margins.Top = 10
+      TextPrompt = 'Valor Venda'
+    end
   end
   object btnSave: TButton
+    Align = Bottom
+    Text = 'Salvar'
   end
 end

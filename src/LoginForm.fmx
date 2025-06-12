@@ -1,14 +1,37 @@
 object frmLogin: TfrmLogin
-  object ToolBar1: TToolBar
-  end
-  object lblTitle: TLabel
+  Caption = 'Login'
+  object RectGradient: TRectangle
+    Align = Bottom
+    Height = 200
+    Fill.Kind = Gradient
+    Fill.Gradient.Color = $FF3D8EFF
+    Fill.Gradient.Color1 = $FF0055D1
   end
   object edtUser: TEdit
+    Align = Top
+    Margins.Left = 20
+    Margins.Right = 20
+    TextPrompt = 'Nome'
   end
   object edtPassword: TEdit
+    Align = Top
+    Margins.Left = 20
+    Margins.Top = 10
+    Margins.Right = 20
+    Password = True
+    TextPrompt = 'Senha'
   end
   object btnLogin: TButton
+    Align = Top
+    Margins.Left = 20
+    Margins.Top = 20
+    Margins.Right = 20
+    Text = 'Log in'
   end
   object lblForgot: TLabel
+    Align = Top
+    Margins.Left = 20
+    Margins.Top = 10
+    Text = 'Forgot Password?'
   end
 end

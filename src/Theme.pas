@@ -3,15 +3,21 @@ unit Theme;
 interface
 
 uses
-  System.UITypes, FMX.Forms, FMX.StdCtrls, FMX.Types, FMX.Controls;
+  System.UITypes, FMX.Forms, FMX.StdCtrls, FMX.Types, FMX.Controls, FMX.Edit,
+  AppStyle;
 
 const
-  COLOR_PRIMARY      = $FF005FA3; // Azul royal
-  COLOR_SECONDARY    = $FFFFFFFF; // Branco
-  COLOR_HIGHLIGHT    = $FFFDB813; // Amarelo ouro
-  COLOR_BACKGROUND   = $FFF4F7FA; // Fundo claro
-  COLOR_TEXT_SECOND  = $FF5B5B5B; // Textos secundários
+  // Paleta de cores principal
+  COLOR_BLUE_LIGHT   = $FF3D8EFF; // Azul claro
+  COLOR_BLUE_DARK    = $FF0055D1; // Azul escuro
+  COLOR_ACCENT       = $FFFFAA00; // Laranja-accent
+  COLOR_WHITE        = $FFFFFFFF; // Branco
+  COLOR_GRAY_DARK    = $FF4A4A4A; // Cinza-escuro
 
+  BORDER_RADIUS      = 12;        // Raio padrão de bordas
+  SHADOW_COLOR       = $33000000; // Preto 20%
+
+// Aplica as cores definidas no tema para controles padrões do formulário
 procedure ApplyTheme(const Form: TCommonCustomForm);
 
 implementation
@@ -21,18 +27,25 @@ var
   I: Integer;
   C: TComponent;
 begin
+  if Assigned(dmStyle) then
+    Form.StyleBook := dmStyle.StyleBook1;
   if Form is TForm then
-    TForm(Form).Fill.Color := COLOR_BACKGROUND;
+    TForm(Form).Fill.Color := COLOR_WHITE;
 
   for I := 0 to Form.ComponentCount - 1 do
   begin
     C := Form.Components[I];
     if C is TToolBar then
-      TToolBar(C).TintColor := COLOR_PRIMARY
+      TToolBar(C).TintColor := COLOR_BLUE_DARK
     else if C is TButton then
-      TButton(C).TintColor := COLOR_HIGHLIGHT
+    begin
+      TButton(C).TintColor := COLOR_ACCENT;
+      TButton(C).TextSettings.FontColor := COLOR_WHITE;
+    end
     else if C is TLabel then
-      TLabel(C).TextSettings.FontColor := COLOR_PRIMARY;
+      TLabel(C).TextSettings.FontColor := COLOR_BLUE_DARK
+    else if C is TEdit then
+      TEdit(C).TextSettings.FontColor := COLOR_GRAY_DARK;
   end;
 end;
 

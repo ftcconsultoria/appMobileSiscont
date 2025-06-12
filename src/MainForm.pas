@@ -4,21 +4,21 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, Theme;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Objects, FMX.ListView.Types, FMX.ListView, Theme;
 
 type
   TfrmMain = class(TForm)
     ToolBar1: TToolBar;
     lblTitle: TLabel;
-    btnNewProduct: TButton;
-    btnNewClient: TButton;
-    btnListProducts: TButton;
-    btnListClients: TButton;
+    cardBalance: TRectangle;
+    lblBalance: TLabel;
+    btnSend: TButton;
+    btnReceive: TButton;
+    ListView1: TListView;
     procedure FormCreate(Sender: TObject);
-    procedure btnNewProductClick(Sender: TObject);
-    procedure btnNewClientClick(Sender: TObject);
-    procedure btnListProductsClick(Sender: TObject);
-    procedure btnListClientsClick(Sender: TObject);
+    procedure btnSendClick(Sender: TObject);
+    procedure btnReceiveClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,32 +32,23 @@ implementation
 
 {$R *.fmx}
 
-uses ProductsForm, ClientsForm, ProductEditForm, ClientEditForm;
+
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   ApplyTheme(Self);
   lblTitle.Text := 'SISCONT';
+  lblBalance.Text := 'Saldo da Conta R$ 5.634,12';
 end;
 
-procedure TfrmMain.btnNewClientClick(Sender: TObject);
+procedure TfrmMain.btnSendClick(Sender: TObject);
 begin
-  frmClientEdit.ShowModal;
+  // Ação de envio de valores
 end;
 
-procedure TfrmMain.btnNewProductClick(Sender: TObject);
+procedure TfrmMain.btnReceiveClick(Sender: TObject);
 begin
-  frmProductEdit.ShowModal;
-end;
-
-procedure TfrmMain.btnListClientsClick(Sender: TObject);
-begin
-  frmClients.Show;
-end;
-
-procedure TfrmMain.btnListProductsClick(Sender: TObject);
-begin
-  frmProducts.Show;
+  // Ação de recebimento de valores
 end;
 
 end.

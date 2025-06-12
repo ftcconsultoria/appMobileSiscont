@@ -1,0 +1,20 @@
+object frmBudget: TfrmBudget
+  Caption = 'Orcamento'
+  object SegmentedControl1: TSegmentedControl
+    Align = Top
+    Width = 300
+    Position.X = 10
+    Position.Y = 10
+    SegmentCount = 3
+  end
+  object rectChart: TRectangle
+    Align = Top
+    Height = 160
+    Margins.Top = 10
+    Fill.Color = claWhite
+  end
+  object LayoutIcons: TLayout
+    Align = Client
+    Margins.Top = 10
+  end
+end
