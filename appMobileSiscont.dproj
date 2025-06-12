@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MainSource>appMobileSiscont.dpr</MainSource>
+    <Base>True</Base>
+  </PropertyGroup>
+  <ItemGroup>
+    <DelphiCompile Include="appMobileSiscont.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="src\MainForm.pas">
+      <Form>MainForm</Form>
+    </DCCReference>
+    <DCCReference Include="src\ProductsForm.pas">
+      <Form>ProductsForm</Form>
+    </DCCReference>
+    <DCCReference Include="src\ProductEditForm.pas">
+      <Form>ProductEditForm</Form>
+    </DCCReference>
+    <DCCReference Include="src\ClientsForm.pas">
+      <Form>ClientsForm</Form>
+    </DCCReference>
+    <DCCReference Include="src\ClientEditForm.pas">
+      <Form>ClientEditForm</Form>
+    </DCCReference>
+    <DCCReference Include="src\DataModule.pas">
+      <Form>DataModule</Form>
+    </DCCReference>
+  </ItemGroup>
+</Project>
