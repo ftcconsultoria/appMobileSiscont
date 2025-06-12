@@ -11,10 +11,12 @@ type
   TfrmProductEdit = class(TForm)
     ToolBar1: TToolBar;
     lblEditProduct: TLabel;
-    edtName: TEdit;
-    edtDescription: TEdit;
-    edtPrice: TEdit;
-    edtStock: TEdit;
+    edtCodigo: TEdit;
+    edtNome: TEdit;
+    edtNCM: TEdit;
+    edtUnidade: TEdit;
+    edtValorCompra: TEdit;
+    edtValorVenda: TEdit;
     btnSave: TButton;
     procedure btnSaveClick(Sender: TObject);
   private

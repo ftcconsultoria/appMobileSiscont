@@ -1,0 +1,10 @@
+object frmSplash: TfrmSplash
+  object Layout1: TLayout
+  end
+  object Image1: TImage
+  end
+  object lblTitle: TLabel
+  end
+  object btnEnter: TButton
+  end
+end

@@ -5,17 +5,19 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, FMX.Edit,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.ListBox;
 
 type
   TfrmClientEdit = class(TForm)
     ToolBar1: TToolBar;
     lblEditClient: TLabel;
-    edtName: TEdit;
-    edtCPF: TEdit;
-    edtAddress: TEdit;
-    edtPhone: TEdit;
-    edtEmail: TEdit;
+    edtNome: TEdit;
+    edtDocumento: TEdit;
+    edtEndereco: TEdit;
+    edtMunicipio: TEdit;
+    cmbUF: TComboBox;
+    edtCEP: TEdit;
+    edtTelefone: TEdit;
     btnSave: TButton;
     procedure btnSaveClick(Sender: TObject);
   private

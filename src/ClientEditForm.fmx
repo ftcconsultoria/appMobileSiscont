@@ -3,15 +3,19 @@ object frmClientEdit: TfrmClientEdit
   end
   object lblEditClient: TLabel
   end
-  object edtName: TEdit
+  object edtNome: TEdit
   end
-  object edtCPF: TEdit
+  object edtDocumento: TEdit
   end
-  object edtAddress: TEdit
+  object edtEndereco: TEdit
   end
-  object edtPhone: TEdit
+  object edtMunicipio: TEdit
   end
-  object edtEmail: TEdit
+  object cmbUF: TComboBox
+  end
+  object edtCEP: TEdit
+  end
+  object edtTelefone: TEdit
   end
   object btnSave: TButton
   end
