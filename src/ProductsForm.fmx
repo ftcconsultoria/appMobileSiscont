@@ -1,0 +1,10 @@
+object frmProducts: TfrmProducts
+  object ToolBar1: TToolBar
+  end
+  object lblProducts: TLabel
+  end
+  object ListView1: TListView
+  end
+  object btnAddProduct: TButton
+  end
+end
