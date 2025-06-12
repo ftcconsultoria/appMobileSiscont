@@ -19,6 +19,10 @@ begin
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TfrmSplash, frmSplash);
+  Application.CreateForm(TfrmProducts, frmProducts);
+  Application.CreateForm(TfrmProductEdit, frmProductEdit);
+  Application.CreateForm(TfrmClients, frmClients);
+  Application.CreateForm(TfrmClientEdit, frmClientEdit);
   Application.CreateForm(TdmData, dmData);
   Application.Run;
 end.
