@@ -1,36 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <ProjectGuid>{2B37B54A-82B6-46B8-838F-8C91D13F6624}</ProjectGuid>
+    <ProjectVersion>18.8</ProjectVersion>
+    <FrameworkType>FMX</FrameworkType>
     <MainSource>appMobileSiscont.dpr</MainSource>
     <Base>True</Base>
+    <Config Condition="'$(Config)'==''">Debug</Config>
+    <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    <TargetedPlatforms>33883</TargetedPlatforms>
+    <AppType>Application</AppType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Cfg_1)'!=''">
+    <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    <DCC_DebugDCUs>true</DCC_DebugDCUs>
+    <DCC_Optimize>false</DCC_Optimize>
+    <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+    <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Cfg_2)'!=''">
+    <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_DebugInformation>0</DCC_DebugInformation>
   </PropertyGroup>
   <ItemGroup>
     <DelphiCompile Include="appMobileSiscont.dpr">
       <MainSource>MainSource</MainSource>
     </DelphiCompile>
     <DCCReference Include="src\MainForm.pas">
-      <Form>MainForm</Form>
+      <Form>frmMain</Form>
+      <FormType>fmx</FormType>
     </DCCReference>
     <DCCReference Include="src\ProductsForm.pas">
-      <Form>ProductsForm</Form>
+      <Form>frmProducts</Form>
+      <FormType>fmx</FormType>
     </DCCReference>
     <DCCReference Include="src\ProductEditForm.pas">
-      <Form>ProductEditForm</Form>
+      <Form>frmProductEdit</Form>
+      <FormType>fmx</FormType>
     </DCCReference>
     <DCCReference Include="src\ClientsForm.pas">
-      <Form>ClientsForm</Form>
+      <Form>frmClients</Form>
+      <FormType>fmx</FormType>
     </DCCReference>
     <DCCReference Include="src\ClientEditForm.pas">
-      <Form>ClientEditForm</Form>
-    </DCCReference>
-    <DCCReference Include="src\DataModule.pas">
-      <Form>DataModule</Form>
+      <Form>frmClientEdit</Form>
+      <FormType>fmx</FormType>
     </DCCReference>
     <DCCReference Include="src\LoginForm.pas">
-      <Form>LoginForm</Form>
+      <Form>frmLogin</Form>
+      <FormType>fmx</FormType>
     </DCCReference>
     <DCCReference Include="src\SplashForm.pas">
-      <Form>SplashForm</Form>
+      <Form>frmSplash</Form>
+      <FormType>fmx</FormType>
     </DCCReference>
+    <DCCReference Include="src\DataModule.pas">
+      <Form>dmData</Form>
+      <FormType>dfm</FormType>
+      <DesignClass>TDataModule</DesignClass>
+    </DCCReference>
+    <BuildConfiguration Include="Release">
+      <Key>Cfg_2</Key>
+      <CfgParent>Base</CfgParent>
+    </BuildConfiguration>
+    <BuildConfiguration Include="Base">
+      <Key>Base</Key>
+    </BuildConfiguration>
+    <BuildConfiguration Include="Debug">
+      <Key>Cfg_1</Key>
+      <CfgParent>Base</CfgParent>
+    </BuildConfiguration>
   </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+    <Borland.ProjectType>Application</Borland.ProjectType>
+    <BorlandProject>
+      <Delphi.Personality>
+        <Source>
+          <Source Name="MainSource">appMobileSiscont.dpr</Source>
+        </Source>
+      </Delphi.Personality>
+    </BorlandProject>
+    <ProjectFileVersion>12</ProjectFileVersion>
+  </ProjectExtensions>
+  <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+  <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+  <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
 </Project>
