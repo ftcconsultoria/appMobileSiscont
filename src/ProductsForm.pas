@@ -1,0 +1,38 @@
+unit ProductsForm;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, FMX.Controls.Presentation,
+  FMX.Layouts, FMX.ListView.Types, FMX.ListView;
+
+type
+  TfrmProducts = class(TForm)
+    ToolBar1: TToolBar;
+    lblProducts: TLabel;
+    ListView1: TListView;
+    btnAddProduct: TButton;
+    procedure btnAddProductClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmProducts: TfrmProducts;
+
+implementation
+
+{$R *.fmx}
+
+uses ProductEditForm;
+
+procedure TfrmProducts.btnAddProductClick(Sender: TObject);
+begin
+  frmProductEdit.ShowModal;
+end;
+
+end.
+
