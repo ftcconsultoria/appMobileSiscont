@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Objects, FMX.Layouts, Theme;
+  FMX.Objects, FMX.Layouts, FMX.Graphics, Theme;
 
 type
   TfrmSplash = class(TForm)
