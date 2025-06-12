@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, FMX.Edit,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, Theme;
 
 type
   TfrmProductEdit = class(TForm)
@@ -18,6 +18,7 @@ type
     edtValorCompra: TEdit;
     edtValorVenda: TEdit;
     btnSave: TButton;
+    procedure FormCreate(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
   private
     { Private declarations }
@@ -31,6 +32,12 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TfrmProductEdit.FormCreate(Sender: TObject);
+begin
+  ApplyTheme(Self);
+  lblEditProduct.Text := 'Produto';
+end;
 
 procedure TfrmProductEdit.btnSaveClick(Sender: TObject);
 begin
