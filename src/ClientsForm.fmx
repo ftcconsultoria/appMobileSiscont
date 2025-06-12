@@ -1,0 +1,10 @@
+object frmClients: TfrmClients
+  object ToolBar1: TToolBar
+  end
+  object lblClients: TLabel
+  end
+  object ListView1: TListView
+  end
+  object btnAddClient: TButton
+  end
+end
