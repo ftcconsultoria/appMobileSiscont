@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Layouts, FMX.ListView.Types, FMX.ListView,
-  FMX.Edit;
+  FMX.Edit, Theme;
 
 type
   TfrmClients = class(TForm)
@@ -15,6 +15,7 @@ type
     SearchBox1: TSearchBox;
     ListView1: TListView;
     btnAddClient: TButton;
+    procedure FormCreate(Sender: TObject);
     procedure btnAddClientClick(Sender: TObject);
     procedure ListView1ItemClick(const Sender: TObject; const AItem: TListViewItem);
   private
@@ -31,6 +32,12 @@ implementation
 {$R *.fmx}
 
 uses ClientEditForm;
+
+procedure TfrmClients.FormCreate(Sender: TObject);
+begin
+  ApplyTheme(Self);
+  lblClients.Text := 'Clientes';
+end;
 
 procedure TfrmClients.btnAddClientClick(Sender: TObject);
 begin

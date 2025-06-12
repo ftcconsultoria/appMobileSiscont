@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls, FMX.Edit,
-  FMX.Controls.Presentation, FMX.ListBox;
+  FMX.Controls.Presentation, FMX.ListBox, Theme;
 
 type
   TfrmClientEdit = class(TForm)
@@ -19,6 +19,7 @@ type
     edtCEP: TEdit;
     edtTelefone: TEdit;
     btnSave: TButton;
+    procedure FormCreate(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
   private
     { Private declarations }
@@ -32,6 +33,12 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TfrmClientEdit.FormCreate(Sender: TObject);
+begin
+  ApplyTheme(Self);
+  lblEditClient.Text := 'Cliente';
+end;
 
 procedure TfrmClientEdit.btnSaveClick(Sender: TObject);
 begin
